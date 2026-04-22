@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Thank you for joining the Bukeng waitlist. You'll receive early access to interest-free BNPL for food in South Africa.">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bukeng.co.za/thank-you.html">
+    <meta property="og:title" content="Thank You - Bukeng Waitlist">
+    <meta property="og:description" content="Thank you for joining the Bukeng waitlist!">
+    <meta property="og:image" content="https://bukeng.co.za/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <title>Thank You - Bukeng Waitlist</title>
+    
+    <!-- Tailwind CSS - Layout only -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: {
+                backgroundColor: false,
+                textColor: false,
+                borderColor: false,
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        
+        /* Bukeng Brand Colors */
+        :root {
+            --bukeng-yellow: #FFFF00;
+            --bukeng-yellow-dark: #E5E500;
+            --bukeng-black: #000000;
+            --bukeng-white: #FFFFFF;
+        }
+        
+        /* Button Styles */
+        .btn-black {
+            background-color: var(--bukeng-black);
+            color: var(--bukeng-white);
+            transition: all 0.3s ease;
+        }
+        .btn-black:hover {
+            background-color: #1a1a1a;
+            transform: translateY(-2px);
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--bukeng-black);
+            color: var(--bukeng-yellow);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top-btn:hover {
+            background-color: var(--bukeng-yellow);
+            color: var(--bukeng-black);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .scroll-top-btn:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .scroll-top-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
+        /* Gift icon color */
+        .gift-icon {
+            color: var(--bukeng-yellow);
+        }
+        
+        /* Yellow border for offer box */
+        .offer-box {
+            border-color: var(--bukeng-yellow);
+            background-color: rgba(255, 255, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center">
+                    <img src="images/logo.png" alt="Bukeng" class="h-8 w-auto">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-black transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-black transition">About</a>
+                    <a href="waitlist.html" class="px-4 py-2 btn-black rounded-lg font-semibold">Join Waitlist</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700">Home</a>
+                <a href="about.html" class="block text-gray-700">About</a>
+                <a href="waitlist.html" class="block px-4 py-2 btn-black rounded-lg text-center">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Content -->
+    <div class="min-h-screen flex items-center justify-center px-4 pt-20 pb-12">
+        <div class="text-center max-w-2xl">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-3xl text-green-600"></i>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4">Thank You for Joining!</h1>
+            <p class="text-lg text-gray-600 mb-8">You're now on the Bukeng waitlist. We'll notify you as soon as we launch in your area.</p>
+            
+            <!-- Offer Box - Using #FFFF00 -->
+            <div class="offer-box border-2 rounded-xl p-6 mb-8">
+                <i class="fas fa-gift gift-icon text-2xl mb-3 block"></i>
+                <p class="text-gray-700">You'll receive <strong>R100 off</strong> your first purchase when we launch!</p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="btn-black inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </a>
+                <a href="waitlist.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 text-black rounded-lg font-semibold hover:border-black transition">
+                    <i class="fas fa-users"></i>
+                    Refer a Friend
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="mb-4"><img src="images/logo.png" alt="Bukeng" class="h-8 w-auto"></div>
+                    <p class="text-sm text-gray-500">Food Access, Reimagined</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="index.html#how-it-works" class="hover:text-black transition">How It Works</a></li>
+                        <li><a href="waitlist.html" class="hover:text-black transition">Waitlist</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-black transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-black transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-black transition">POPIA Compliance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li>hello@bukeng.co.za</li>
+                        <li>Cape Town, South Africa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 mt-8 pt-8 text-center text-sm text-gray-400">
+                © 2024 Bukeng. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Scroll to Top functionality
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        if (scrollBtn) {
+            function toggleScrollButton() {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
+            }
+            
+            function scrollToTop(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            
+            window.addEventListener('scroll', toggleScrollButton);
+            scrollBtn.addEventListener('click', scrollToTop);
+            toggleScrollButton();
+        }
+    </script>
+</body>
+</html>

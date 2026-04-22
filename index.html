@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Bukeng - Buy Now, Pay Later for food in South Africa.">
+    <meta name="keywords" content="BNPL, buy now pay later, South Africa, food delivery, groceries">
+    <meta name="author" content="Bukeng">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bukeng.co.za/">
+    <meta property="og:title" content="Bukeng - Food Access, Reimagined">
+    <meta property="og:description" content="Buy now, pay later for food in South Africa. 0% interest, no hidden fees.">
+    <meta property="og:image" content="https://bukeng.co.za/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bukeng - Food Access, Reimagined">
+    <meta name="twitter:description" content="Buy now, pay later for food in South Africa">
+    <meta name="twitter:image" content="https://bukeng.co.za/images/logo.png">
+    
+    <link rel="canonical" href="https://bukeng.co.za/">
+    <title>Bukeng - Food Access, Reimagined | BNPL for South Africa</title>
+    
+    <!-- Tailwind CSS - Only for layout utilities, NOT for colors -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Disable Tailwind's default colors -->
+    <script>
+        tailwind.config = {
+            corePlugins: {
+                backgroundColor: false,
+                textColor: false,
+                borderColor: false,
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS (OVERRIDES Tailwind) -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center">
+                    <img src="images/logo.png" alt="Bukeng" class="h-8 w-auto">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-black transition font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-black transition font-medium">About</a>
+                    <a href="waitlist.html" class="px-4 py-2 btn-black rounded-lg font-semibold">Join Waitlist</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-black transition">Home</a>
+                <a href="about.html" class="block text-gray-700 hover:text-black transition">About</a>
+                <a href="waitlist.html" class="block px-4 py-2 btn-black rounded-lg text-center">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full mb-6">
+                        <i class="fas fa-bolt text-yellow"></i>
+                        <span class="text-sm font-medium">Coming Soon to South Africa</span>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6">
+                        Food Access,
+                        <br />
+                        <span class="border-b-4 border-bottom-yellow">Reimagined</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Buy now, pay later for groceries, restaurants, and food delivery.
+                        No interest. No hidden fees. Just better access to food.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="waitlist.html" class="btn-yellow inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold group">
+                            Join Waitlist
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                        </a>
+                        <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gray-300 text-black rounded-xl font-semibold hover:border-black transition">
+                            How It Works
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-shield-alt"></i><span>POPIA Compliant</span></div>
+                        <div class="w-1 h-1 bg-gray-300 rounded-full"></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-percent"></i><span>0% Interest</span></div>
+                        <div class="w-1 h-1 bg-gray-300 rounded-full"></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-lock"></i><span>Bank-Level Security</span></div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" class="relative">
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-xl">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-shopping-basket text-5xl text-yellow mb-3"></i>
+                            <h3 class="font-bold text-xl">Your Order</h3>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm"><span class="text-gray-500">Groceries</span><span class="font-semibold">R450.00</span></div>
+                            <div class="flex justify-between text-sm"><span class="text-gray-500">Delivery Fee</span><span class="font-semibold">R35.00</span></div>
+                            <div class="border-t border-gray-200 my-2"></div>
+                            <div class="flex justify-between font-bold"><span>Total</span><span>R485.00</span></div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                            <div class="text-sm font-semibold mb-2">Pay with Bukeng</div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="p-2 border border-yellow rounded-lg bg-yellow/10">
+                                    <div class="text-xs text-gray-500">Today</div>
+                                    <div class="font-bold">R161.67</div>
+                                </div>
+                                <div class="p-2 border border-gray-200 rounded-lg">
+                                    <div class="text-xs text-gray-500">2 weeks</div>
+                                    <div class="font-bold">R161.67</div>
+                                </div>
+                                <div class="p-2 border border-gray-200 rounded-lg">
+                                    <div class="text-xs text-gray-500">4 weeks</div>
+                                    <div class="font-bold">R161.66</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-full btn-yellow py-3 rounded-lg font-semibold">Pay with Bukeng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4">How <span class="border-b-4 border-bottom-yellow">Bukeng Works</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Simple, transparent, and designed for South Africans</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-yellow rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shopping-cart text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">1. Shop for Food</h3>
+                    <p class="text-gray-500 text-sm">Order groceries, restaurant meals, or delivery as usual</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-yellow rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-credit-card text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">2. Select Bukeng</h3>
+                    <p class="text-gray-500 text-sm">Choose Bukeng at checkout as your payment method</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-yellow rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-alt text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">3. Pay in 3 Instalments</h3>
+                    <p class="text-gray-500 text-sm">Split payment into 3 equal, interest-free instalments</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-yellow rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-utensils text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">4. Enjoy Your Food</h3>
+                    <p class="text-gray-500 text-sm">Get your food immediately, pay over time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4">Use Cases for <span class="border-b-4 border-bottom-yellow">Every Meal</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Whether you're shopping for the week or ordering dinner</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-shopping-bag text-4xl text-yellow mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Groceries</h3>
+                    <p class="text-gray-600 mb-4">Buy groceries from Checkers, Woolworths, Pick n Pay, and more</p>
+                    <div class="flex flex-wrap gap-2"><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Checkers</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Woolworths</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Pick n Pay</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Spar</span></div>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-utensils text-4xl text-yellow mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Restaurants</h3>
+                    <p class="text-gray-600 mb-4">Dine at your favourite restaurants or order takeaway</p>
+                    <div class="flex flex-wrap gap-2"><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Nando's</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">KFC</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Ocean Basket</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Spur</span></div>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-truck text-4xl text-yellow mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Food Delivery</h3>
+                    <p class="text-gray-600 mb-4">Order from Uber Eats, Mr D, and other delivery platforms</p>
+                    <div class="flex flex-wrap gap-2"><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Uber Eats</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Mr D</span><span class="px-2 py-1 bg-gray-100 text-xs rounded-lg">Bolt Food</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4">Built on a Foundation of <span class="border-b-4 border-bottom-yellow">Trust</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We're building the most secure and transparent BNPL platform for South Africa</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-shield-alt text-3xl text-yellow mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">POPIA Compliant</h3>
+                    <p class="text-gray-500 text-sm">Your data is protected under South African privacy laws</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-lock text-3xl text-yellow mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">Bank-Level Encryption</h3>
+                    <p class="text-gray-500 text-sm">256-bit SSL encryption for all transactions</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-file-invoice text-3xl text-yellow mb-4"></i>
+                    <h3 class="text-lg font-bold mb-2">NCR Registered</h3>
+                    <p class="text-gray-500 text-sm">Fully compliant with National Credit Regulator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Reimagine Food Access?</h2>
+            <p class="text-lg text-gray-300 mb-8">Join thousands of South Africans waiting to transform how they buy food</p>
+            <a href="waitlist.html" class="btn-yellow inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition group">
+                Join the Waitlist
+                <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div><div class="mb-4"><img src="images/logo.png" alt="Bukeng" class="h-8 w-auto"></div><p class="text-sm text-gray-500">Food Access, Reimagined</p></div>
+                <div><h4 class="font-semibold mb-4">Product</h4><ul class="space-y-2 text-sm text-gray-500"><li><a href="#how-it-works" class="hover:text-black transition">How It Works</a></li><li><a href="waitlist.html" class="hover:text-black transition">Waitlist</a></li></ul></div>
+                <div><h4 class="font-semibold mb-4">Legal</h4><ul class="space-y-2 text-sm text-gray-500"><li><a href="#" class="hover:text-black transition">Privacy Policy</a></li><li><a href="#" class="hover:text-black transition">Terms of Service</a></li><li><a href="#" class="hover:text-black transition">POPIA Compliance</a></li></ul></div>
+                <div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-sm text-gray-500"><li>hello@bukeng.co.za</li><li>Cape Town, South Africa</li></ul></div>
+            </div>
+            <div class="border-t border-gray-100 mt-8 pt-8 text-center text-sm text-gray-400">© 2024 Bukeng. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        if (scrollBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) scrollBtn.classList.add('show');
+                else scrollBtn.classList.remove('show');
+            });
+            scrollBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>
